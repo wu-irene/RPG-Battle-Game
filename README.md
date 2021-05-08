@@ -24,16 +24,23 @@ A design pattern we will be using is the Command pattern where objects such as t
 ## Class Diagram
  > Include a class diagram(s) for each design pattern and a description of the diagram(s). Your class diagram(s) should include all the main classes you plan for the project. This should be in sufficient detail that another group could pick up the project this point and successfully complete it. Use proper OMT notation (as discussed in the course slides). You may combine multiple design patterns into one diagram if you'd like, but it needs to be clear which portion of the diagram represents which design pattern (either in the diagram or in the description). 
 
-Character
+## Character
+
 This figure illustrates the structure of the Character class, which includes the npc and player of the game. Players have professions, items and attributes. npc has different functions.
  ![image](https://user-images.githubusercontent.com/81706195/117526634-68432080-af7b-11eb-90a7-63308e0ec6b2.png)
  
-Event
+## Event
+
 The Event category is mainly divided into battle events and story events.
 ![image](https://user-images.githubusercontent.com/81706195/117526947-14d1d200-af7d-11eb-9352-5d8946f665da.png)
 
-Enemy
+## Enemy
+This figure shows the class as being in the enemy. The types of enemies, including different mobs and bosses, enemy attributes and skills. And the rewards for killing
 ![image](https://user-images.githubusercontent.com/81706195/117527025-a8a39e00-af7d-11eb-8312-e0a53675ef8b.png)
+
+## Interface
+This image shows the interface in the game. Start interface, menu interface, archive interface and in-game interface.
+![image](https://user-images.githubusercontent.com/81706195/117527276-9f1b3580-af7f-11eb-8d87-16dbc3e4a74b.png)
 
 
 
