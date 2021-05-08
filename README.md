@@ -1,44 +1,33 @@
 # RPG (Temporary title) 
- Authors: [Irene Wu] https://github.com/iwu021 [Jiaxing Lin] (https://github.com/jlin1110) [Xinyu Tong] https://github.com/xtong019 
+ Authors: [Irene Wu](https://github.com/iwu021), [Jiaxing Lin](https://github.com/jlin1110) , [Xinyu Tong](https://github.com/xtong019) 
 
-
+### Introduction 
 All of the group members enjoy gaming as a hobby and know that many others do as well. Therefore, we wanted to create a short, but interesting and fun RPG game that is text interactive. While the gist and theme of the game is yet to be completely developed yet, we know that we would want to create characters that can attack/defend/heal in fights or choose to run and deny an opponent's request to duel. One idea that we have is to have a twin fight a boss enemy in order to save their twin brother/sister. She/he will have a journey where they will need to obtain several items to use and encounter surprise events depending on the users choices before the final fight. The user will enter a certain command to be performed and the program will execute that command. We will be creating three to four virtual character classes where variables will be updated throughout the game such as health, objects, attack strength, and more.  
 
+### Languages/input & output
  We are going to be using C++ to create the program using linux/Github/UIDs and more. User input will be from a list of options that are provided at each turn of the game entered from the keyboard and the output is text that is generated from the project to the monitor. 
-
+## Design patterns 
 A design pattern we will be using is the Command pattern where objects such as the role-playing character’s choices are encapsulated in the game to perform an action such as attack or use an ability. We will be using this pattern to implement choices in the game and to trigger events. A problem we anticipate encountering is how each choice that the user inputs will trigger an output from the program and generating exceptions when the user enters a choice that is not recognized. That is why we will be using this design pattern to store values that the user may possibly input in the command and a receiver object to invoke and execute pathways. The command object will store routed event arguments and objects per to the user’s request. 
 
 Another design pattern we will be using is the Strategy pattern where algorithms are encapsulated from a pool for use during runtime, these algorithms are interchangeable, which means that they are substitutable for each other.  A problem we anticipate encountering is that if we only have one algorithm, it might not be suitable for all the situations and the runtime for the program will not be optimal. However, after using the Strategy pattern, we are able to use different algorithms for different situations, and lower the run-time of our game.  For example, we could use the strategy pattern to support different attack algorithms, we can also create and switch families of classes or objects at runtime, like creating one family for each character with its weapon and armor, and we are able to change to a different character with different weapon and armor, all based on user's choices at runtime.  Choosing the Strategy pattern will lead to a good solution to the problem because having algorithms that are interchangeable and substitutable for each other would optimize the run-time performance better.
 
 
- > ## Phase II
- > In addition to completing the "Class Diagram" section below, you will need to 
- > * Set up your GitHub project board as a Kanban board for the project. It should have columns that map roughly to 
- >   * Backlog, TODO, In progress, In testing, Done
- >   * You can change these or add more if you'd like, but we should be able to identify at least these.
- > * There is no requirement for automation in the project board but feel free to explore those options.
- > * Create an "Epic" (note) for each feature and each design pattern and assign them to the appropriate team member. Place these in the `Backlog` column
- > * Complete your first *sprint planning* meeting to plan out the next 7 days of work.
- >   * Create smaller development tasks as issues and assign them to team members. Place these in the `TODO` column.
- >   * These cards should represent roughly 7 days worth of development time for your team, taking you until your first meeting with the TA
 ## Class Diagram
- > Include a class diagram(s) for each design pattern and a description of the diagram(s). Your class diagram(s) should include all the main classes you plan for the project. This should be in sufficient detail that another group could pick up the project this point and successfully complete it. Use proper OMT notation (as discussed in the course slides). You may combine multiple design patterns into one diagram if you'd like, but it needs to be clear which portion of the diagram represents which design pattern (either in the diagram or in the description). 
-
-## Character
+### Character
 
 This figure illustrates the structure of the Character class, which includes the npc and player of the game. Players have professions, items and attributes. npc has different functions.
  ![image](https://user-images.githubusercontent.com/81706195/117526634-68432080-af7b-11eb-90a7-63308e0ec6b2.png)
  
-## Event
+### Event
 
 The Event category is mainly divided into battle events and story events.
 ![image](https://user-images.githubusercontent.com/81706195/117526947-14d1d200-af7d-11eb-9352-5d8946f665da.png)
 
-## Enemy
+### Enemy
 This figure shows the class as being in the enemy. The types of enemies, including different mobs and bosses, enemy attributes and skills. And the rewards for killing
 ![image](https://user-images.githubusercontent.com/81706195/117527025-a8a39e00-af7d-11eb-8312-e0a53675ef8b.png)
 
-## Interface
+### Interface
 This image shows the interface in the game. Start interface, menu interface, archive interface and in-game interface.
 ![image](https://user-images.githubusercontent.com/81706195/117527276-9f1b3580-af7f-11eb-8d87-16dbc3e4a74b.png)
 
