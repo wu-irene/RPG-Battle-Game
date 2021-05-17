@@ -9,27 +9,11 @@ All of the group members enjoy gaming as a hobby and know that many others do as
 ## Design patterns 
 A design pattern we will be using is the Command pattern where objects such as the role-playing character’s choices are encapsulated in the game to perform an action such as attack or use an ability. We will be using this pattern to implement choices in the game and to trigger events. A problem we anticipate encountering is how each choice that the user inputs will trigger an output from the program and generating exceptions when the user enters a choice that is not recognized. That is why we will be using this design pattern to store values that the user may possibly input in the command and a receiver object to invoke and execute pathways. The command object will store routed event arguments and objects per to the user’s request. 
 
-Another design pattern we will be using is the Strategy pattern where algorithms are encapsulated from a pool for use during runtime, these algorithms are interchangeable, which means that they are substitutable for each other.  A problem we anticipate encountering is that if we only have one algorithm, it might not be suitable for all the situations and the runtime for the program will not be optimal. However, after using the Strategy pattern, we are able to use different algorithms for different situations, and lower the run-time of our game.  For example, we could use the strategy pattern to support different attack algorithms, we can also create and switch families of classes or objects at runtime, like creating one family for each character with its weapon and armor, and we are able to change to a different character with different weapon and armor, all based on user's choices at runtime.  Choosing the Strategy pattern will lead to a good solution to the problem because having algorithms that are interchangeable and substitutable for each other would optimize the run-time performance better.
+Another design pattern we will be using is the Composite pattern where we can instantiate our character class as a group of objects that are treated the same way with a single instance of the same type. We can use the pattern to compose objects into a hierarchy and can treat the objects either individually or uniformly. Objects, such as enemy types, are easier implemented, changed, tested, and reused with this pattern. For example, Enemy class will inherit the same functions and variables as the Character superclass. Both will use Item class as a component. 
 
 
 ## Class Diagram
-### Character
-
-This figure illustrates the structure of the Character class, which includes the npc and player of the game. Players have professions, items and attributes. npc has different functions.
- ![image](https://user-images.githubusercontent.com/81706195/117526634-68432080-af7b-11eb-90a7-63308e0ec6b2.png)
- 
-### Event
-
-The Event category is mainly divided into battle events and story events.
-![image](https://user-images.githubusercontent.com/81706195/117526947-14d1d200-af7d-11eb-9352-5d8946f665da.png)
-
-### Enemy
-This figure shows the class as being in the enemy. The types of enemies, including different mobs and bosses, enemy attributes and skills. And the rewards for killing
-![image](https://user-images.githubusercontent.com/81706195/117527025-a8a39e00-af7d-11eb-8312-e0a53675ef8b.png)
-
-### Interface
-This image shows the interface in the game. Start interface, menu interface, archive interface and in-game interface.
-![image](https://user-images.githubusercontent.com/81706195/117527276-9f1b3580-af7f-11eb-8d87-16dbc3e4a74b.png)
+![Untitled Diagram](https://user-images.githubusercontent.com/81645935/118563641-c9a98300-b723-11eb-8475-3698983f17fc.png)
 
 
 
