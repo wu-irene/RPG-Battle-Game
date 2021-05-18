@@ -27,3 +27,5 @@ private:
 	string name;
 	int coins;
 }
+
+#endif
