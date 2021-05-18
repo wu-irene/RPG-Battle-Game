@@ -11,6 +11,8 @@ A design pattern we will be using is the Command pattern where objects such as t
 
 Another design pattern we will be using is the Composite pattern where we can instantiate our character class as a group of objects that are treated the same way with a single instance of the same type. We can use the pattern to compose objects into a hierarchy and can treat the objects either individually or uniformly. Objects, such as enemy types, are easier implemented, changed, tested, and reused with this pattern. For example, Enemy class will inherit the same functions and variables as the Character superclass. Both will use Item class as a component. 
 
+Another design pattern we will be using is the Decorator pattern where we can add items to “decorate” our character.  For example, our character starts “naked” -- 0 armor and 0 attack strength, but if we equip him with a vest, now he has 20 armor.  And then if we equip him with a sword, now he has 20 attack strength, etc.  After he is fully equipped, we can return the final stats with everything added.  The Decorator pattern allows us to add different stats to characters based on their items easier.
+
 
 ## Class Diagram
 ![Untitled Diagram (1)](https://user-images.githubusercontent.com/81645935/118573866-33338c80-b738-11eb-8f99-3b69e9200ad9.png)
