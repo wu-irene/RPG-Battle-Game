@@ -13,6 +13,7 @@ Battle::Battle(Enemy enmy, Player plyr)
 Battle::start_battle()
 {
   cout << enemy.name + " challenges you to a duel!" <<endl;
+  attack();
 
 }
 Battle::attack()
