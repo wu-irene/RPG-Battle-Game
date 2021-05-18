@@ -11,14 +11,14 @@ void game_start()
   cout << "You wake up to a fiery ablaze sky. Your head hurts as you try to remember what exactly happened to you. A nearby villager starts patching you up." <<endl;
   cout << "She appears tiny and clearly shaken by the turn of events. She asks\"What's your name, hero?"<<endl;
   cout<< "Enter your name: "<endl;
-  cin >>name;
+  cin >>_name;
   //initiate player stats
-  hero.name = _name;
-  hero.attackStrength = 50;
-  hero.defense = 15;
-  hero.health = 200; 
-  hero.coins = 1000;
-  cout << "\"Are you alright << getName() <<"?\"";
+  player.name = _name;
+  player.attackStrength = 50;
+  player.defense = 15;
+  player.health = 200; 
+  player.coins = 1000;
+  cout << "\"Are you alright << player.name <<"?\"";
   cout << "You shake your head as your mind returns blank. However, you are very injured." <<endl;
 
 }
