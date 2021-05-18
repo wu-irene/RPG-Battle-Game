@@ -18,6 +18,7 @@ private:
     vector <Character*> WeaponList;
     vector <Character*> ShopList;
 public:
+    ~Item();
     Item(std::string name, int effect, int type, int profession, int price): name(name), effect(effect), type(type), profession(profession), price(price) {}
     string getItem();
     int gettype();
