@@ -46,3 +46,8 @@ void Character::setArmor(double a)
 {
     armor = a;
 }
+
+void Character::displayInfo()
+{
+    cout << name << " " << healthPoint << " " << power << " " << armor << endl;
+}
