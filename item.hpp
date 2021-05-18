@@ -26,6 +26,5 @@ public:
     int getprofession();
     int getprice();
     void print_list(vector List);
- 
-}   
+}
 #endif
