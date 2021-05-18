@@ -3,7 +3,7 @@
 
 string Enemy::echoType()
 {
-    cout << "This is a enemy type." << endl;
+    cout << "This is an enemy type." << endl;
 }
 
 int Enemy::getCoins()
