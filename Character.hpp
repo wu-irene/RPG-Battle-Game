@@ -26,6 +26,6 @@ private:
 	double armor;
 	string name;
 	int coins;
-}
+};
 
 #endif
