@@ -5,6 +5,7 @@
 class Invoker : public CharacterEntity
 {
 public:
+	public Invoker() : CharacterEntity("Invoker") {}
 	double GetMaxHp();
 	double GetMaxExp();
 	double GetPower();
