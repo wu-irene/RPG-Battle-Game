@@ -214,7 +214,7 @@ void HeroWithInventory<TCharacter>::LevelUpCharacter()
 }
 
 template<class TCharacter>
-string HeroWithInventory<TCharacter>::info()
+string HeroWithInventory<TCharacter>::Info()
 {
 	return "\n--------- " + _character.GetName() + " ---------\n" +
 		" Level: " + GetLevel() + "\n" +
