@@ -45,7 +45,7 @@ public:
 	void TakeDamage(double damageTaken);
 	void SetHpCap();
 	void LevelUpCharacter();
-	string info();
+	string Info();
 	DroppableBackpack DropItem();
 	EquipmentBackpack GetEquipmentBackpack();
 	ConsumableBackpack GetConsumableBackpack();
