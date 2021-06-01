@@ -15,7 +15,7 @@ Another design pattern we will be using is the Decorator pattern where we can ad
 
 
 ## Class Diagram
-![Untitled Diagram (1)](https://user-images.githubusercontent.com/81645935/118573866-33338c80-b738-11eb-8f99-3b69e9200ad9.png)
+![Untitled Diagram](https://user-images.githubusercontent.com/81549188/120277807-5fd3c200-c269-11eb-8f79-e913bf92c393.png)
 
 
 
