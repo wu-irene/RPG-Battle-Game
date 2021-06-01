@@ -1,11 +1,17 @@
 #include "HeroWithInventory.h"
 #include "ILevelableCharacter.h"
 #include "IShoppableCharacter.h"
+#include "ICharacterEntity.h"
+#include "Equipment.h"
+#include "Consumable.h"
+#include "EquipmentBackpack.h"
+#include "ConsumableBackpack.h"
+#include "DroppableBackpack.h"
 #include <string>
 using namespace std;
 
 template<class TCharacter>
-HeroWithInventory<TCharacter>::HeroWithInventory()
+HeroWithInventory<TCharacter>::HeroWithInventory(ICharacterEntity character, EquipmentBackpack equipmentBackpack, ConsumableBackpack consumableBackpack, double initialCurrency)
 {
 	_character = character;
 	_equipmentBackpack = equipmentBackpack;
@@ -17,31 +23,31 @@ HeroWithInventory<TCharacter>::HeroWithInventory()
 }
 
 template<class TCharacter>
-bool HeroWithInventory<TCharacter>::AddItem(Equipment equipment)
+bool HeroWithInventory<TCharacter>::AddItem(Equipment* equipment)
 {
 	return _equipmentBackpack.AddItem(equipment);
 }
 
 template<class TCharacter>
-bool HeroWithInventory<TCharacter>::RemoveItem(Equipment equipment)
+bool HeroWithInventory<TCharacter>::RemoveItem(Equipment* equipment)
 {
 	return _equipmentBackpack.RemoveItem(equipment);
 }
 
 template<class TCharacter>
-bool HeroWithInventory<TCharacter>::Equip(Equipment equipment)
+bool HeroWithInventory<TCharacter>::Equip(Equipment* equipment)
 {
 	return _equipmentBackpack.Equip(equipment);
 }
 
 template<class TCharacter>
-bool HeroWithInventory<TCharacter>::UnEquip(Equipment equipment)
+bool HeroWithInventory<TCharacter>::UnEquip(Equipment* equipment)
 {
 	return _equipmentBackpack.UnEquip(equipment);
 }
 
 template<class TCharacter>
-bool HeroWithInventory<TCharacter>::ToggleEquipStatus(Equipment equipment)
+bool HeroWithInventory<TCharacter>::ToggleEquipStatus(Equipment* equipment)
 {
 	return _equipmentBackpack.ToggleEquipStatus(equipment);
 }
@@ -65,19 +71,19 @@ int HeroWithInventory<TCharacter>::GetUnEquippedEquipmentCount()
 }
 
 template<class TCharacter>
-bool HeroWithInventory<TCharacter>::AddItem(Consumable consumable)
+bool HeroWithInventory<TCharacter>::AddConsumable(Consumable* consumable)
 {
 	return _consumableBackpack.AddConsumable(consumable);
 }
 
 template<class TCharacter>
-bool HeroWithInventory<TCharacter>::RemoveItem(Cosumable consumable)
+bool HeroWithInventory<TCharacter>::RemoveConsumable(Consumable* consumable)
 {
 	return _consumableBackpack.RemoveConsumable(consumable);
 }
 
 template<class TCharacter>
-bool HeroWithInventory<TCharacter>::UseConsumable(Consumable consumable)
+bool HeroWithInventory<TCharacter>::UseConsumable(Consumable* consumable)
 {
 	if (!_consumableBackpack.DecrementConsumableCount(consumable))
 		return false;
@@ -90,7 +96,7 @@ bool HeroWithInventory<TCharacter>::UseConsumable(Consumable consumable)
 }
 
 template<class TCharacter>
-int HeroWithInventory<TCharacter>::GetConsumableCount(Consumable consumable)
+int HeroWithInventory<TCharacter>::GetConsumableCount(Consumable* consumable)
 {
 	return _consumableBackpack.GetConsumableCount(consumable);
 }
