@@ -1,5 +1,13 @@
 #ifndef __HEROWITHINVENTORY_HPP__
 #define __HEROWITHINVENTORY_HPP__
+#include "ICharacterEntity.h"
+#include "ILevelableCharacter.h"
+#include "IShoppableCharacter.h"
+#include "EquipmentBackpack.h"
+#include "ConsumableBackpack.h"
+#include "DroppableBackpack.h"
+#include "Consumable.h"
+#include "Equipment.h"
 #include <string>
 using namespace std;
 
@@ -15,19 +23,19 @@ private:
 	double _currentExp;
 	double _currency;
 public:
-	HeroWithInventory();
-	bool AddItem(Equipment equipment);
-	bool RemoveItem(Equipment equipment);
-	bool Equip(Equipment equipment);
-	bool UnEquip(Equipment equipment);
-	bool ToggleEquipStatus(Equipment equipment);
+	HeroWithInventory(ICharacterEntity character, EquipmentBackpack equipmentBackpack, ConsumableBackpack consumableBackpack, double initialCurrency);
+	bool AddItem(Equipment* equipment);
+	bool RemoveItem(Equipment* equipment);
+	bool Equip(Equipment* equipment);
+	bool UnEquip(Equipment* equipment);
+	bool ToggleEquipStatus(Equipment* equipment);
 	int GetEquipmentCount();
 	int GetEquippedEquipmentCount();
 	int GetUnEquippedEquipmentCount();
-	bool AddItem(Consumable consumable);
-	bool RemoveItem(Cosumable consumable);
-	bool UseConsumable(Consumable consumable);
-	int GetConsumableCount(Consumable consumable);
+	bool AddConsumable(Consumable* consumable);
+	bool RemoveConsumable(Consumable* consumable);
+	bool UseConsumable(Consumable* consumable);
+	int GetConsumableCount(Consumable* consumable);
 	int GetNumberOfConsumableType();
 	string GetName();
 	int GetLevel();
@@ -49,7 +57,6 @@ public:
 	DroppableBackpack DropItem();
 	EquipmentBackpack GetEquipmentBackpack();
 	ConsumableBackpack GetConsumableBackpack();
-
 };
 
 #endif
