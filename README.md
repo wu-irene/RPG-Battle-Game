@@ -15,6 +15,8 @@ Our third design pattern we will be using is the Decorator pattern where we can 
 
 Another design pattern we will be using is the Decorator pattern where we can add items to “decorate” our character.  For example, our character starts “naked” -- 0 armor and 0 attack strength, but if we equip him with a vest, now he has 20 armor.  And then if we equip him with a sword, now he has 20 attack strength, etc.  After he is fully equipped, we can return the final stats with everything added.  The Decorator pattern allows us to add different stats to characters based on their items easier.
 
+Another design pattern we will be using is the Decorator pattern where we can add items to “decorate” our character.  For example, our character starts “naked” -- 0 armor and 0 attack strength, but if we equip him with a vest, now he has 20 armor.  And then if we equip him with a sword, now he has 20 attack strength, etc.  After he is fully equipped, we can return the final stats with everything added.  The Decorator pattern allows us to add different stats to characters based on their items easier.
+
 
 ## Class Diagram
 ![Untitled Diagram](https://user-images.githubusercontent.com/81549188/120277807-5fd3c200-c269-11eb-8f79-e913bf92c393.png)
