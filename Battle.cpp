@@ -1,47 +1,44 @@
-#include "Game.cpp"
-#include "Character.hpp"
-#include "Battle.hpp"
+#include "Battle.h"
 #include <string>
-#include <iostream>
+#include <list>
+#include "ICharacterStrategy.h"
+#include "IBattalableCharacter.h"
+#include "ILevelableCharacter.h"
+using namespace std;
 
-Battle::Battle(Enemy enmy, Player plyr)
+Battle::Battle(list<ICharacterStrategy> characterStrategies)
 {
-  enemy = enmy;
-  player = ply;
+  _characterStrategies = characterStrategies;
 }
 
-Battle::start_battle()
+IBattlableCharacter Battle::Fight(ILevelableCharacter hero, IBattalableCharacter monster)
 {
-  cout << enemy.name + " challenges you to a duel!" <<endl;
-  attack();
+  cout << "==== GAME START ====" << endl;
+  hero.Info();
+  monster.Info();
 
-}
-Battle::attack()
-{
-  useItem();
-  end_battle();
-}
-Battle::useItem()
-{
+  IBattlableCharacter currentPlayer = hero;
+  int roundCount = 1;
 
-}
-Battle::end_battle()
-{
-  if (player.health >= 0)
+  while (hero.GetCurrentHp() > 0 && monster.GetCurrentHp() >0 )
   {
-    victor = enemy.name;
+    auto damage = _characterStrategies.Single(s -> s.CanAttack(currentPlayer)).Attack(currentPlayer);
+    currentPlayer = SwapTurn(currentPlayer, hero, monster);
+    auto damageTaken = _characterStrategies.Single(s-> s.CanDefense(currentPlayer)).Defense(currentPlayer,damage);
+    currentPlayer.TakeDamage(damageTaken);
+    cout << "+++++++++++++++ Rount " + roundCount + " ++++++++++++++++" << endl;
+    hero.Info();
+    monster.Info();
+    roundCount ++;
   }
-  else
-  victor = player.name
-  if (victor = enemy.name)
-  {
-    cout<< "You are defeated by " + victor +". You are returning to the training grounds." <<endl;
-  }
-  else
-  {
-    cout << "You have defeated " + enemy.name + "!" <<endl;
-  }
-  /*
-  list enemy drops, exp, coins
-  */
+  if (hero.GetCurrentHp() <= 0)
+  return monster;
+  auto droppedItem = monster.DropItem();
+  hero.AddCurrentExp(droppedItem.GetReward());
+  return hero;
+}
+
+IBattlableCharacter Battle::SwapTurn (IBattlableCharacter currentPlayer, IBattlableCharacter hero, IBattlableCharacter monster)
+{
+  return currentPlayer == hero ? monster : hero;
 }
