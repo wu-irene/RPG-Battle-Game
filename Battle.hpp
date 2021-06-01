@@ -1,20 +1,20 @@
-#ifndef __BATTLE_HPP__
-#define __BATTLE_HPP__
-#include "Character.hpp"
-#include "Enemy.hpp"
-#include <string>
+#ifndef _BATTLE_
+#define _BATTLE_
+#include "ILevelableCharacter.h"
+#include "ICharacterStrategy.h"
+#include "IBattalableCharacter.h"
+#include <list>
+#include <iostream>
+using namespace std;
 
-class Battle{
-private:
-    bool turn = true;
-    bool defending = false;
-    bool end = false;
-
+class Battle
+{
+private: 
+  list<ICharacterStrategy> _characterStrategies;
+   IBattalableCharacter SwapTurn(IBattalableCharacter currPlayer, IBattalableCharacter hero, IBattleableCharacter monster);
 public:
-  Battle (Enemy enm, Player ply);
-  void start_battle();
-  void end_battle();
-  void attack();
-  void useItem();
+  Battle(list<ICharacterStrategy> characterStrategies);
+   IBattalableCharacter Fight(ILevelableCharacter hero, IBattalableCharacter monster);
+  
 };
-#endif
+#endif _BATTLE_
