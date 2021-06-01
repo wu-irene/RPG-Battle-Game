@@ -1,12 +1,15 @@
-#ifndef __IBATTLABLECHARACTER_HPP__
-#define __IBATTLABLECHARACTER_HPP__
+#ifndef __IBATTALABLECHARACTER_HPP__
+#define __IBATTALABLECHARACTER_HPP__
 #include "ICharacterEntity.h"
+#include "DroppableBackpack.h"
 using namespace std;
 
-class IBattalableCharacter : ICharacterEntity
+class IBattalableCharacter : public ICharacterEntity
 {
 public: 
-	~IBattalableCharacter() {};
+	IBattalableCharacter() {}
+
+	~IBattalableCharacter() {}
 
 	virtual double GetCurrentHp() = 0;
 
