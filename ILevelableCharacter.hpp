@@ -5,6 +5,8 @@ using namespace std;
 class ILevelableCharacter
 {
 public:
+    ILevelableCharacter() {}
+
     ~ILevelableCharacter() {}
 
     virtual void AddCurrentExp(double exp) = 0;
