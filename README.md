@@ -13,10 +13,6 @@ Another design pattern we will be using is the Factory pattern which is an abstr
 Our third design pattern we will be using is the Decorator pattern where we can dynamically add items to “decorate” our character without affecting the behavior of other objects. During run-time, the user has the option to level up, therefore increasing his stats as the player progresses through the game. Additionally, the user is given the option to view their information within every menu with everything added through our Info() function that can be invoked to view the player's stats. The pattern is utilized to drive our menu system to equip, buy, and consume objects that affects the stats of our player based on which items they use. By subclassing, we can extend the functionality of items through backpacks and further how this is employed throughout the game. For example, when constructing enemies, their stats are automatically equipped by calling on the LeveledMonster class based on what type of enemy they are. 
 
 
-Another design pattern we will be using is the Decorator pattern where we can add items to “decorate” our character.  For example, our character starts “naked” -- 0 armor and 0 attack strength, but if we equip him with a vest, now he has 20 armor.  And then if we equip him with a sword, now he has 20 attack strength, etc.  After he is fully equipped, we can return the final stats with everything added.  The Decorator pattern allows us to add different stats to characters based on their items easier.
-
-Another design pattern we will be using is the Decorator pattern where we can add items to “decorate” our character.  For example, our character starts “naked” -- 0 armor and 0 attack strength, but if we equip him with a vest, now he has 20 armor.  And then if we equip him with a sword, now he has 20 attack strength, etc.  After he is fully equipped, we can return the final stats with everything added.  The Decorator pattern allows us to add different stats to characters based on their items easier.
-
 
 ## Class Diagram
 ![Untitled Diagram](https://user-images.githubusercontent.com/81549188/120277807-5fd3c200-c269-11eb-8f79-e913bf92c393.png)
@@ -41,6 +37,11 @@ Another design pattern we will be using is the Decorator pattern where we can ad
  
  ## Screenshots
  > Screenshots of the input/output after running your application
+ > ![1](https://user-images.githubusercontent.com/81549188/120361949-5bd28f00-c2bf-11eb-9cf4-f5c782aeea12.png)
+ > ![2](https://user-images.githubusercontent.com/81549188/120361981-668d2400-c2bf-11eb-8db1-d1c281830585.png)
+ > ![3](https://user-images.githubusercontent.com/81549188/120361993-6a20ab00-c2bf-11eb-8206-a6d932fcb6a1.png)
+
+
  ## Installation/Usage
  > Instructions on installing and running your application
  ## Testing
