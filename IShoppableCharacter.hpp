@@ -3,10 +3,12 @@
 #include <string>
 using namespace std;
 
-class IshoppableCharacter
+class IShoppableCharacter
 {
 public:
-    ~IshoppableCharacter() {}
+    IShoppableCharacter() {}
+    
+    ~IShoppableCharacter() {}
 
     virtual double GetCurrency() = 0;
 
